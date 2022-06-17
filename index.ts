@@ -4,6 +4,12 @@ const prisma = new PrismaClient();
 
 async function main() {
   await prisma.$connect();
+  const restaurant = await prisma.restaurant.findMany();
+  console.log(restaurant);
+  const tag = await prisma.tag.findMany();
+  console.log(tag);
+  const meal = await prisma.meal.findMany();
+  console.log(meal);
 }
 
 main()
