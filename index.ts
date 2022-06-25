@@ -10,6 +10,11 @@ async function main() {
   console.log(tag);
   const meal = await prisma.meal.findMany();
   console.log(meal);
+
+  await prisma.restaurant.deleteMany();
+  await prisma.tag.deleteMany();
+  await prisma.food.deleteMany();
+  await prisma.meal.deleteMany();
 }
 
 main()
