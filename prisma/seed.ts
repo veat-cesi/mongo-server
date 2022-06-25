@@ -6,7 +6,6 @@ async function main() {
   await prisma.tag.deleteMany();
   await prisma.food.deleteMany();
   await prisma.meal.deleteMany();
-  await prisma.rates.deleteMany();
 
   const Vapiano = await prisma.restaurant.upsert({
     where: { email: "contact@vapiano.com" },

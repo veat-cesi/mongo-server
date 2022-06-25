@@ -19,7 +19,7 @@ model Restaurant {
   about     String?
   tags      Tag[]
   food      Food[]
-  rates     Float
+  rates     Float?
   featured  Boolean  @default(false)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
