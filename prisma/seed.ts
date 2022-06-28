@@ -16,6 +16,9 @@ async function main() {
       phone: "012345789",
       city: "Bordeaux",
       address: "264 Boulevard Godard",
+      rates: 4.5,
+      img: "https://devdactic.fra1.digitaloceanspaces.com/foodui/f1.png",
+      featured: true,
       about:
         "The home of handmade fresh pasta, thin crust pizza, protein packed salads, homemade sauces and dressings too. Choose your pasta shape and add any extras you like.",
       tags: {
@@ -102,11 +105,13 @@ async function main() {
     where: { email: "contact@urbangreen.com" },
     update: {},
     create: {
-      name: "✨Urban Greens✨",
+      name: "Urban Greens",
       email: "contact@urbangreen.com",
       phone: "123457890",
       city: "Bordeaux",
       address: "264 Boulevard Godard",
+      img: "https://devdactic.fra1.digitaloceanspaces.com/foodui/f2.png",
+      rates: 4,
       about:
         "The home of handmade fresh pasta, thin crust pizza, protein packed salads, homemade sauces and dressings too. Choose your pasta shape and add any extras you like.",
       tags: {
