@@ -19,6 +19,7 @@ model Restaurant {
   about     String?
   tags      Tag[]
   food      Food[]
+  orders    Order[]
   rates     Float?
   featured  Boolean  @default(false)
   createdAt DateTime @default(now())
@@ -62,10 +63,13 @@ model Meal {
 }
 
 model Order {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  meals     Json
-  total     Float
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  deleted   Boolean? @default(false)
+  id           String      @id @default(auto()) @map("_id") @db.ObjectId
+  meals        Json
+  total        Float
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+  deleted      Boolean?    @default(false)
+  status       Int?        @default(0)
+  Restaurant   Restaurant? @relation(fields: [restaurantId], references: [id])
+  restaurantId String?     @db.ObjectId
 }
